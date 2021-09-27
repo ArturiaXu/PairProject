@@ -5,8 +5,8 @@ $(function () {
     $("#status").css("cursor","none");
     $("#searchBox input").removeAttr("disabled");
 
-    //var urlStr = "https://mock.mengxuegu.com/mock/60634842f2e38f3a2f6ba3ec/example_copy/list";
-    var urlStr = "http://192.168.0.110:8000/list";
+    var urlStr = "https://mock.mengxuegu.com/mock/60634842f2e38f3a2f6ba3ec/example_copy/list";
+    //var urlStr = "http://192.168.0.110:8000/list";
     var val = localStorage.getItem("searchVal");
     if(val === ""){
         val = " ";
@@ -18,8 +18,8 @@ $(function () {
     };
     showList(urlStr,searchVal);
 
-    //var urlStr = "https://mock.mengxuegu.com/mock/60634842f2e38f3a2f6ba3ec/example_copy/rank";
-    var urlStr = "http://192.168.0.110:8000/rank";
+    var urlStr = "https://mock.mengxuegu.com/mock/60634842f2e38f3a2f6ba3ec/example_copy/rank";
+    //var urlStr = "http://192.168.0.110:8000/rank";
     var rankVal = {
         type:"rank"
     };
@@ -47,8 +47,8 @@ $(function () {
                         return "name" + index;
                     },
                     rankClick :function(data){
-                        //var urlStr = "https://mock.mengxuegu.com/mock/60634842f2e38f3a2f6ba3ec/example_copy/list";
-                        var urlStr = "http://192.168.0.110:8000/list";
+                        var urlStr = "https://mock.mengxuegu.com/mock/60634842f2e38f3a2f6ba3ec/example_copy/list";
+                        //var urlStr = "http://192.168.0.110:8000/list";
                         var searchVal = {
                             pagenum: 1,
                             type: 2,
@@ -81,8 +81,8 @@ $(function () {
     $("#searchPaper").on('keypress',function(event){
         if(event.keyCode == 13){
             console.log($("#search option:selected").val());
-            //var urlStr = "https://mock.mengxuegu.com/mock/60634842f2e38f3a2f6ba3ec/example_copy/list";
-            var urlStr = "http://192.168.0.110:8000/list";
+            var urlStr = "https://mock.mengxuegu.com/mock/60634842f2e38f3a2f6ba3ec/example_copy/list";
+            //var urlStr = "http://192.168.0.110:8000/list";
             var searchVal = {
                 pagenum: 1,
                 type: parseInt($("#search option:selected").val()),
@@ -113,8 +113,8 @@ $(function () {
         var paperUid = {
             paperUid:$(this).parent().children("div.title").attr("data-paper-uid")
         };
-        GetHandle(urlStr, JSON.stringify(paperUid), function(data){
-            //删除论文列表
-        });
+        // GetHandle(urlStr, JSON.stringify(paperUid), function(data){
+        //     //删除论文列表
+        // });
     });
 })

@@ -15,8 +15,8 @@ var pageBar = new Vue({
                 this.cur = data;
             }
             console.log(this.cur+'页');
-            //var urlStr = "https://mock.mengxuegu.com/mock/60634842f2e38f3a2f6ba3ec/example_copy/list";
-            var urlStr = "http://192.168.0.110:8000/list";
+            var urlStr = "https://mock.mengxuegu.com/mock/60634842f2e38f3a2f6ba3ec/example_copy/list";
+            //var urlStr = "http://192.168.0.110:8000/list";
             var searchVal = {
                 pagenum: this.cur,
                 type: 1,
@@ -27,8 +27,8 @@ var pageBar = new Vue({
         },
         pageClick: function(){
             console.log('现在在'+this.cur+'页');
-            //var urlStr = "https://mock.mengxuegu.com/mock/60634842f2e38f3a2f6ba3ec/example_copy/list";
-            var urlStr = "http://192.168.0.110:8000/list";
+            var urlStr = "https://mock.mengxuegu.com/mock/60634842f2e38f3a2f6ba3ec/example_copy/list";
+            //var urlStr = "http://192.168.0.110:8000/list";
             var searchVal = {
                 pagenum: this.cur,
                 type: 1,
